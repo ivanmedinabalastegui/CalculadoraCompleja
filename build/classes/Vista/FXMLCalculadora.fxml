@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="351.0" prefWidth="350.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.FXMLCalculadoraController">
+    <stylesheets>
+        <URL value="@fxmlcalculadora.css" />
+    </stylesheets>
+   <children>
+      <TextField fx:id="TFOperador1" layoutX="133.0" layoutY="66.0" promptText="Introducir operador1" />
+      <TextField fx:id="TFOperador2" layoutX="133.0" layoutY="106.0" promptText="Introducir operador2" />
+      <TextField fx:id="TFResultado" editable="false" layoutX="133.0" layoutY="270.0" onAction="#HandlerResultado" />
+      <Label layoutX="52.0" layoutY="70.0" text="Operador 1" />
+      <Label layoutX="52.0" layoutY="110.0" text="Operador 2" />
+      <Label layoutX="55.0" layoutY="274.0" text="Resultado" />
+      <Button fx:id="BTNOperar" layoutX="133.0" layoutY="142.0" mnemonicParsing="false" onAction="#HandlerOperar" prefHeight="25.0" prefWidth="149.0" text="Operar" />
+      <RadioButton fx:id="RSuma" layoutX="132.0" layoutY="185.0" mnemonicParsing="false" selected="true" text="Suma">
+         <toggleGroup>
+            <ToggleGroup fx:id="grupoCuenta" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="RDivision" layoutX="197.0" layoutY="185.0" mnemonicParsing="false" text="Division" toggleGroup="$grupoCuenta" />
+      <RadioButton fx:id="RResta" layoutX="132.0" layoutY="216.0" mnemonicParsing="false" text="Resta" toggleGroup="$grupoCuenta" />
+      <RadioButton fx:id="RMultiplicacion" layoutX="197.0" layoutY="216.0" mnemonicParsing="false" text="Multiplicacion" toggleGroup="$grupoCuenta" />
+   </children>
+</AnchorPane>
